@@ -1,0 +1,9 @@
+form {
+    fieldset {
+        legend {
+            color: $blue;
+            font-weight: bold;
+            font-size: calculateRem(30);
+        }
+    }
+}

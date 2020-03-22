@@ -1,0 +1,5 @@
+$font-size-base-px:16;
+@function calculateRem($size) {
+    $remSize: $size / $font-size-base-px;
+    @return #{$remSize}rem;
+}
