@@ -7,9 +7,7 @@
           <b-form-input
             v-model="form.name"
             @input="$v.form.name.$touch()"
-            :state="
-                            $v.form.name.$dirty ? !$v.form.name.$invalid : null
-                        "
+            :state="$v.form.name.$dirty ? !$v.form.name.$invalid : null"
           ></b-form-input>
           <b-form-invalid-feedback
             v-if="errorName"
@@ -23,17 +21,12 @@
                 v-model="form.first_last_name"
                 type="text"
                 @input="$v.form.first_last_name.$touch()"
-                :state="
-                                    $v.form.first_last_name.$dirty
-                                        ? !$v.form.first_last_name.$invalid
-                                        : null
-                                "
+                :state="$v.form.first_last_name.$dirty ? !$v.form.first_last_name.$invalid : null"
               ></b-form-input>
-              <b-form-invalid-feedback v-if="errorFirstName" class="invalid-feedback d-block">
-                {{
-                errorFirstName[0]
-                }}
-              </b-form-invalid-feedback>
+              <b-form-invalid-feedback
+                v-if="errorFirstName"
+                class="invalid-feedback d-block"
+              >{{ errorFirstName[0] }}</b-form-invalid-feedback>
             </b-form-group>
           </b-col>
           <b-col>
@@ -43,17 +36,12 @@
                 type="text"
                 required
                 @input="$v.form.second_last_name.$touch()"
-                :state="
-                                    $v.form.second_last_name.$dirty
-                                        ? !$v.form.second_last_name.$invalid
-                                        : null
-                                "
+                :state="$v.form.second_last_name.$dirty ? !$v.form.second_last_name.$invalid : null"
               >></b-form-input>
-              <b-form-invalid-feedback v-if="errorSecondLastName" class="invalid-feedback d-block">
-                {{
-                errorSecondLastName[0]
-                }}
-              </b-form-invalid-feedback>
+              <b-form-invalid-feedback
+                v-if="errorSecondLastName"
+                class="invalid-feedback d-block"
+              >{{ errorSecondLastName[0] }}</b-form-invalid-feedback>
             </b-form-group>
           </b-col>
         </b-row>
@@ -65,11 +53,7 @@
                 :options="gender"
                 required
                 @input="$v.form.gender.$touch()"
-                :state="
-                                  $v.form.gender.$dirty
-                                      ? !$v.form.gender.$invalid
-                                      : null
-                              "
+                :state="$v.form.gender.$dirty ? !$v.form.gender.$invalid : null"
               ></b-form-select>
               <b-form-invalid-feedback
                 v-if="errorGender"
@@ -84,11 +68,7 @@
                 type="text"
                 required
                 @input="$v.form.age.$touch()"
-                :state="
-                                    $v.form.age.$dirty
-                                        ? !$v.form.age.$invalid
-                                        : null
-                                "
+                :state="$v.form.age.$dirty ? !$v.form.age.$invalid : null"
               ></b-form-input>
               <b-form-invalid-feedback
                 v-if="errorAge"
@@ -103,17 +83,12 @@
                 :options="select_marital_status"
                 required
                 @input="$v.form.marital_status.$touch()"
-                :state="
-                                    $v.form.marital_status.$dirty
-                                        ? !$v.form.marital_status.$invalid
-                                        : null
-                                "
+                :state="$v.form.marital_status.$dirty ? !$v.form.marital_status.$invalid : null"
               ></b-form-select>
-              <b-form-invalid-feedback v-if="errorMaritalStatus" class="invalid-feedback d-block">
-                {{
-                errorMaritalStatus[0]
-                }}
-              </b-form-invalid-feedback>
+              <b-form-invalid-feedback
+                v-if="errorMaritalStatus"
+                class="invalid-feedback d-block"
+              >{{ errorMaritalStatus[0] }}</b-form-invalid-feedback>
             </b-form-group>
           </b-col>
         </b-row>
@@ -125,11 +100,7 @@
                 type="email"
                 required
                 @input="$v.form.email.$touch()"
-                :state="
-                                    $v.form.email.$dirty
-                                        ? !$v.form.email.$invalid
-                                        : null
-                                "
+                :state="$v.form.email.$dirty ? !$v.form.email.$invalid : null"
               ></b-form-input>
               <b-form-invalid-feedback
                 v-if="errorEmail"
@@ -142,11 +113,7 @@
                 type="password"
                 required
                 @input="$v.form.password.$touch()"
-                :state="
-                                    $v.form.password.$dirty
-                                        ? !$v.form.password.$invalid
-                                        : null
-                                "
+                :state="$v.form.password.$dirty ? !$v.form.password.$invalid : null"
               ></b-form-input>
               <b-form-invalid-feedback
                 v-if="errorPassword"
@@ -163,11 +130,7 @@
                 :options="interest"
                 required
                 @input="$v.form.interest.$touch()"
-                :state="
-                                    $v.form.interest.$dirty
-                                        ? !$v.form.interest.$invalid
-                                        : null
-                                "
+                :state="$v.form.interest.$dirty ? !$v.form.interest.$invalid : null"
               ></b-form-select>
               <b-form-invalid-feedback
                 v-if="errorInterest"
