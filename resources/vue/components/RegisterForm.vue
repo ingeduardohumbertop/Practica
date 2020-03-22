@@ -208,29 +208,6 @@ export default {
       text: options.level,
       value: options.id
     }));
-
-    /*
-    maritalStatus.get().then(response => {
-      const { maritial_status } = response.data;
-      this.select_marital_status = maritial_status.map(item => ({
-        text: item.name,
-        value: item.id
-      }));
-    });
-    maritalStatus.get().then(response => {
-      const { maritial_status } = response.data;
-      this.select_marital_status = maritial_status.map(item => ({
-        text: item.name,
-        value: item.id
-      }));
-    });
-    maritalStatus.get().then(response => {
-      const { maritial_status } = response.data;
-      this.select_marital_status = maritial_status.map(item => ({
-        text: item.name,
-        value: item.id
-      }));
-    });*/
   },
   validations: {
     form: {
